@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CinemaCat</string>
+    <string name="film_name">FilmName</string>
+    <string name="Information_film">Information_film</string>
 </resources>

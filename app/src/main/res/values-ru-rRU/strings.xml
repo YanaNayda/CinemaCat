@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CinemaCat</string>
+    <string name="film_name">имя</string>
+    <string name="Information_film">информация</string>
+</resources>
