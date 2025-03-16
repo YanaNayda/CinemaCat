@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">CinemaCat</string>
-    <string name="film_name">имя</string>
+    <string name="film_name">Кот в сапогах: Последнее желание</string>
     <string name="Information_film">информация</string>
+    <string name="select_your_cinema">Select your cinema!</string>
+    <string name="i_m_ready_to_order">I\'m ready to order!</string>
+    <string name="choose_the_best_day">Choose the best day!</string>
+    <string name="you_chose_the_date">You chose the date:</string>
+    <string name="choose_your_ticket_for_the_best_movie">Choose your ticket for the best movie!</string>
+    <string name="adult">Adult</string>
+    <string name="txt_plus">+</string>
+    <string name="minus">-</string>
+    <string name="child">Child</string>
+    <string name="only_with_a_student_card">*Only with a student card</string>
+    <string name="only_for_children_under_12_years">Only for children under 12 years</string>
 </resources>
