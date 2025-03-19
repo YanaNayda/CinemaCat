@@ -20,7 +20,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#1C2366"
+            android:background="@color/primary_blue"
             >
 
             <!-- ToolBar widget -->
@@ -29,41 +29,41 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/img_btn_settings"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:layout_marginEnd="10dp"
                 android:background="#00FFFFFF"
                 android:contentDescription="TODO"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@android:drawable/dialog_frame" />
+                app:srcCompat="@android:drawable/alert_dark_frame" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/txt_nameApp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:text="@string/app_name"
                 android:textColor="#ffff"
                 android:textSize="28sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton2"
-                app:layout_constraintStart_toEndOf="@+id/imageButton"
+                app:layout_constraintEnd_toStartOf="@+id/img_btn_exit"
+                app:layout_constraintStart_toEndOf="@+id/img_btn_settings"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
-
             <ImageButton
-                android:id="@+id/imageButton2"
+                android:id="@+id/img_btn_exit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -72,9 +72,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/toolbar"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@android:drawable/dialog_frame"
-
-                 />
+                app:srcCompat="@android:drawable/dialog_frame" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -83,20 +81,23 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/cinema_back"
             >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fillViewport="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/img_main_poster"
                     android:layout_width="match_parent"
-                    android:layout_height="225dp"
-                    android:scaleType="fitCenter"
-                    android:layout_marginBottom="5dp"
+                    android:layout_height="250dp"
+                    android:contentDescription="TODO"
+                    android:scaleType="centerCrop"
                     app:srcCompat="@drawable/img_back_frame_1" />
 
                 <LinearLayout
@@ -105,9 +106,9 @@
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:id="@+id/imageButton7"
+                        android:id="@+id/img_btn_poster"
                         android:layout_width="wrap_content"
-                        android:layout_height="70dp"
+                        android:layout_height="80dp"
                         android:layout_weight="1"
                         android:contentDescription="TODO"
                         android:scaleType="centerCrop"
@@ -115,9 +116,9 @@
                         app:srcCompat="@drawable/img_back_frame_1" />
 
                     <ImageButton
-                        android:id="@+id/imageButton3"
+                        android:id="@+id/img_btn__friends"
                         android:layout_width="wrap_content"
-                        android:layout_height="70dp"
+                        android:layout_height="80dp"
                         android:layout_weight="1"
                         android:contentDescription="TODO"
                         android:scaleType="centerCrop"
@@ -125,9 +126,9 @@
                         app:srcCompat="@drawable/img_back_frame_2" />
 
                     <ImageButton
-                        android:id="@+id/imageButton4"
+                        android:id="@+id/img_btn_wolf"
                         android:layout_width="wrap_content"
-                        android:layout_height="70dp"
+                        android:layout_height="80dp"
                         android:layout_weight="1"
                         android:contentDescription="TODO"
                         android:scaleType="centerCrop"
@@ -135,9 +136,9 @@
                         app:srcCompat="@drawable/img_back_frame_3" />
 
                     <ImageButton
-                        android:id="@+id/imageButton5"
+                        android:id="@+id/img_btn_cat"
                         android:layout_width="wrap_content"
-                        android:layout_height="70dp"
+                        android:layout_height="80dp"
                         android:layout_weight="1"
                         android:contentDescription="TODO"
                         android:scaleType="centerCrop"
@@ -146,20 +147,22 @@
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/txt_name_film"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:text="@string/film_name"
+                    android:textColor="@color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/txt_info_fim"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/white"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="10dp"
@@ -173,40 +176,43 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView5"
+                        android:id="@+id/txt_select_cinema"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/select_your_cinema"
-                        android:textSize="16sp"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <Spinner
-                        android:id="@+id/spinnerCinema"
+                        android:id="@+id/spinner_cinema"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#00FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/txt_select_day"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
-                        android:layout_marginBottom="10dp"
-                        android:background="#00FFFFFF"
-                        />
-
-                    <TextView
-                        android:id="@+id/textView6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
                         android:text="@string/choose_the_best_day"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        />
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
                     <CalendarView
                         android:id="@+id/calendarView"
                         android:layout_width="wrap_content"
-                        android:layout_height="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
                         android:layout_marginBottom="10dp"
-                        android:minDate="01/03/2025"
-                        android:maxDate="30/04/2025"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:maxDate="30/05/2025"
+                        android:minDate="01/03/2025" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -214,32 +220,74 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/txt_chose_day"
+                            android:id="@+id/txt_client_chose_day"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="@string/you_chose_the_date"
-                            />
+                            android:textColor="@color/white"
+                            android:text="@string/you_chose_the_date" />
 
                         <TextView
                             android:id="@+id/txt_date"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:textColor="@color/white"
                             android:text=""
                             android:textStyle="bold" />
 
                     </LinearLayout>
 
                     <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="TextView" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_time_morning"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/white"
+                            android:backgroundTint="@color/primary_blue"
+                            android:text="10:20" />
+
+                        <Button
+                            android:id="@+id/btn_time_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/primary_blue"
+                            android:textColor="@color/white"
+                            android:text="14:45" />
+
+                        <Button
+                            android:id="@+id/btn_time_evening"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/white"
+                            android:backgroundTint="@color/primary_blue"
+                            android:text="19:30" />
+                    </LinearLayout>
+
+                    <TextView
                         android:id="@+id/txt_chose_ticket"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
+                        android:layout_marginTop="20dp"
                         android:layout_marginBottom="10dp"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:text="@string/choose_your_ticket_for_the_best_movie" />
+                        android:textColor="@color/white"
+                        android:text="@string/choose_your_ticket_for_the_best_movie"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -249,146 +297,247 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
                             android:orientation="horizontal">
 
                             <TextView
                                 android:id="@+id/txt_adult"
-                                android:layout_width="50dp"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="0.7"
+                                android:textColor="@color/white"
+                                android:gravity="start"
                                 android:text="@string/adult" />
 
                             <TextView
                                 android:id="@+id/txt_adult_price"
-                                android:layout_width="50dp"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="70" />
+                                android:layout_weight="0.9"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:text="70 ₪" />
 
                             <Button
-                                android:id="@+id/button10"
-                                android:layout_width="wrap_content"
+                                android:id="@+id/btn_adult_ticket_minus"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="0.1"
-                                android:layout_marginStart="10dp"
+                                android:layout_weight="0.9"
+                                android:textColor="@color/white"
+                                android:backgroundTint="@color/primary_blue"
                                 android:text="@string/minus" />
 
                             <TextView
-                                android:id="@+id/textView17"
-                                android:layout_width="wrap_content"
+                                android:id="@+id/txt_adult_ticket_count"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:textColor="@color/white"
+                                android:gravity="center"
                                 android:text="@string/txt_zero" />
 
                             <Button
-                                android:id="@+id/button13"
-                                android:layout_width="wrap_content"
+                                android:id="@+id/btn_adult_ticket_plus"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="0.1"
+                                android:layout_weight="0.9"
+                                android:textColor="@color/white"
+                                android:backgroundTint="@color/primary_blue"
                                 android:text="@string/txt_plus" />
 
                         </LinearLayout>
 
+                        <TextView
+                            android:id="@+id/txt_adult_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+
+                            android:text="Only for 18+"
+                            android:textColor="@color/grey"
+                            android:textSize="10sp" />
+
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
                             android:orientation="horizontal">
 
                             <TextView
                                 android:id="@+id/txt_student"
-                                android:layout_width="50dp"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
+                                android:layout_weight="0.7"
+                                android:textColor="@color/white"
+                                android:gravity="start"
                                 android:text="Student" />
 
                             <TextView
                                 android:id="@+id/txt_student_price"
-                                android:layout_width="50dp"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
-
-                                android:text="45" />
+                                android:layout_weight="0.9"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:text="45 ₪" />
 
                             <Button
                                 android:id="@+id/btn_student_ticket_minus"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
+                                android:layout_weight="0.9"
+                                android:textColor="@color/white"
+                                android:backgroundTint="@color/primary_blue"
                                 android:text="@string/minus" />
 
                             <TextView
                                 android:id="@+id/txt_student_ticket_count"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:textColor="@color/white"
+                                android:gravity="center"
                                 android:text="@string/txt_zero" />
 
                             <Button
                                 android:id="@+id/btn_student_ticket_plus"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
+                                android:layout_weight="0.9"
+                                android:textColor="@color/white"
+                                android:backgroundTint="@color/primary_blue"
                                 android:text="@string/txt_plus" />
                         </LinearLayout>
 
                         <TextView
-                            android:id="@+id/textView20"
+                            android:id="@+id/txt_student_info"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:textColor="#BF0000"
-                            android:text="@string/only_with_a_student_card" />
+                            android:text="@string/only_with_a_student_card"
+                            android:textColor="@color/grey"
+                            android:textSize="10sp" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
                             android:orientation="horizontal">
 
                             <TextView
                                 android:id="@+id/txt_child"
-                                android:layout_width="60dp"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
+                                android:layout_weight="0.7"
+                                android:textColor="@color/white"
+                                android:gravity="start"
                                 android:text="@string/child" />
 
                             <TextView
                                 android:id="@+id/txt_child_price"
-                                android:layout_width="50dp"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="35" />
+                                android:layout_weight="0.9"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:text="35₪" />
 
                             <Button
                                 android:id="@+id/btn_child_ticket_minus"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
+                                android:layout_weight="0.9"
+                                android:textColor="@color/white"
+                                android:backgroundTint="@color/primary_blue"
                                 android:text="@string/minus" />
 
                             <TextView
                                 android:id="@+id/txt_child_ticket_count"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:textColor="@color/white"
+                                android:gravity="center"
                                 android:text="@string/txt_zero" />
 
                             <Button
                                 android:id="@+id/btn_child_ticket_plus"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
+                                android:layout_weight="0.9"
+                                android:textColor="@color/white"
+                                android:backgroundTint="@color/primary_blue"
                                 android:text="@string/txt_plus" />
 
                         </LinearLayout>
 
                         <TextView
-                            android:id="@+id/textView19"
+                            android:id="@+id/txt_child_info"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:textColor="#BF0000"
-                            android:layout_weight="1"
-                            android:text="@string/only_for_children_under_12_years" />
+                            android:text="@string/only_for_children_under_12_years"
+                            android:textColor="@color/grey"
+                            android:textSize="10sp" />
 
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="25dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_total_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="18sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:text="Total price:" />
+
+                        <TextView
+                            android:id="@+id/txt_total_price_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:text=""
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="25dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_total_tickets"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:text="Total tickets:"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/txt_total_tickets_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:text="">
+                        </TextView>
                     </LinearLayout>
 
 
@@ -403,7 +552,7 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/imageButton6"
+                android:id="@+id/img_btn_cat_anim"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="7dp"
@@ -418,7 +567,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/txt_dialog_cat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -427,14 +576,14 @@
                     android:text="Meaw, meaw, meaw.." />
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/btn_confirm_order"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_gravity="bottom"
                     android:layout_marginBottom="5dp"
                     android:layout_marginEnd="10dp"
-                    android:backgroundTint="#1C2366"
+                    android:backgroundTint="@color/primary_blue"
                     android:text="@string/i_m_ready_to_order" />
             </LinearLayout>
 

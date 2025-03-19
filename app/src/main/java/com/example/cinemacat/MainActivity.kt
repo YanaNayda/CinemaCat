@@ -18,10 +18,10 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val toolbar: Toolbar = findViewById(R.id.toolbar_main)
+       // val toolbar: Toolbar = findViewById(R.id.toolbar_main)
 
         // using toolbar as ActionBar
-        setSupportActionBar(toolbar)
+       // setSupportActionBar(toolbar)
 
 
     }
