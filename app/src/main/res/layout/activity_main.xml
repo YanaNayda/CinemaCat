@@ -35,18 +35,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageButton
-                android:id="@+id/img_btn_settings"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_marginEnd="10dp"
-                android:background="#00FFFFFF"
-                android:contentDescription="TODO"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@android:drawable/alert_dark_frame" />
 
             <TextView
                 android:id="@+id/txt_nameApp"
@@ -55,10 +43,11 @@
                 android:text="@string/app_name"
                 android:textColor="#ffff"
                 android:textSize="28sp"
+                android:layout_margin="20dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/img_btn_exit"
-                app:layout_constraintStart_toEndOf="@+id/img_btn_settings"
+                app:layout_constraintStart_toStartOf="@+id/toolbar"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -88,8 +77,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fillViewport="true"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
                 android:orientation="vertical">
 
                 <ImageView
@@ -106,7 +96,7 @@
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:id="@+id/img_btn_poster"
+                        android:id="@+id/img_btn_main_poster"
                         android:layout_width="wrap_content"
                         android:layout_height="80dp"
                         android:layout_weight="1"
@@ -116,7 +106,7 @@
                         app:srcCompat="@drawable/img_back_frame_1" />
 
                     <ImageButton
-                        android:id="@+id/img_btn__friends"
+                        android:id="@+id/img_btn_friends"
                         android:layout_width="wrap_content"
                         android:layout_height="80dp"
                         android:layout_weight="1"
@@ -155,7 +145,7 @@
                     android:layout_marginRight="10dp"
                     android:text="@string/film_name"
                     android:textColor="@color/white"
-                    android:textSize="24sp"
+                    android:textSize="26sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -163,16 +153,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginEnd="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginBottom="7dp"
+                    android:textSize="16sp"
                     android:text="@string/Information_film" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -180,7 +173,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/select_your_cinema"
-                        android:textSize="18sp"
+                        android:textSize="20sp"
                         android:textColor="@color/white"
                         android:textStyle="bold" />
 
@@ -188,31 +181,33 @@
                         android:id="@+id/spinner_cinema"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginBottom="10dp"
-                        android:background="#00FFFFFF" />
+                        android:layout_marginTop="5dp"
+                        android:background="#00FFFFFF"
+                        android:layout_marginBottom="10dp" />
 
                     <TextView
                         android:id="@+id/txt_select_day"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
+                        android:layout_marginTop="20dp"
                         android:textColor="@color/white"
                         android:text="@string/choose_the_best_day"
-                        android:textSize="18sp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <CalendarView
                         android:id="@+id/calendarView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+
                         android:layout_marginTop="15dp"
                         android:layout_marginBottom="10dp"
                         android:layout_weight="1"
+                        android:theme="@style/Theme.Material3.DynamicColors.Dark.NoActionBar"
                         android:textColor="@color/white"
                         android:gravity="center"
-                        android:maxDate="30/05/2025"
-                        android:minDate="01/03/2025" />
+                        android:layout_below="@id/txt_date"
+                       />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -224,6 +219,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:textSize="16sp"
                             android:textColor="@color/white"
                             android:text="@string/you_chose_the_date" />
 
@@ -231,7 +227,8 @@
                             android:id="@+id/txt_date"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            android:layout_weight="0.7"
+                            android:textSize="16sp"
                             android:textColor="@color/white"
                             android:text=""
                             android:textStyle="bold" />
@@ -239,11 +236,15 @@
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/textView4"
+                        android:id="@+id/txt_chose_time"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="TextView" />
+                        android:textSize="20sp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:textStyle="bold"
+                        android:text="It's a time to choosea time !" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -252,29 +253,35 @@
 
                         <Button
                             android:id="@+id/btn_time_morning"
+
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:layout_margin="5dp"
                             android:textColor="@color/white"
-                            android:backgroundTint="@color/primary_blue"
+                            android:background="@drawable/btn_background"
                             android:text="10:20" />
 
                         <Button
                             android:id="@+id/btn_time_day"
+
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:backgroundTint="@color/primary_blue"
+                            android:layout_margin="5dp"
                             android:textColor="@color/white"
+                            android:background="@drawable/btn_background"
                             android:text="14:45" />
 
                         <Button
                             android:id="@+id/btn_time_evening"
                             android:layout_width="wrap_content"
+
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:layout_margin="5dp"
                             android:textColor="@color/white"
-                            android:backgroundTint="@color/primary_blue"
+                            android:background="@drawable/btn_background"
                             android:text="19:30" />
                     </LinearLayout>
 
@@ -286,7 +293,7 @@
                         android:layout_marginBottom="10dp"
                         android:textColor="@color/white"
                         android:text="@string/choose_your_ticket_for_the_best_movie"
-                        android:textSize="18sp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <LinearLayout
@@ -324,7 +331,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.9"
                                 android:textColor="@color/white"
-                                android:backgroundTint="@color/primary_blue"
+                                android:background="@drawable/btn_background"
                                 android:text="@string/minus" />
 
                             <TextView
@@ -342,7 +349,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.9"
                                 android:textColor="@color/white"
-                                android:backgroundTint="@color/primary_blue"
+                                android:background="@drawable/btn_background"
                                 android:text="@string/txt_plus" />
 
                         </LinearLayout>
@@ -352,7 +359,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-
                             android:text="Only for 18+"
                             android:textColor="@color/grey"
                             android:textSize="10sp" />
@@ -387,8 +393,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.9"
+                                android:background="@drawable/btn_background"
                                 android:textColor="@color/white"
-                                android:backgroundTint="@color/primary_blue"
                                 android:text="@string/minus" />
 
                             <TextView
@@ -406,7 +412,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.9"
                                 android:textColor="@color/white"
-                                android:backgroundTint="@color/primary_blue"
+                                android:background="@drawable/btn_background"
                                 android:text="@string/txt_plus" />
                         </LinearLayout>
 
@@ -416,6 +422,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/only_with_a_student_card"
                             android:textColor="@color/grey"
+
                             android:textSize="10sp" />
 
                         <LinearLayout
@@ -447,8 +454,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.9"
+                                android:background="@drawable/btn_background"
                                 android:textColor="@color/white"
-                                android:backgroundTint="@color/primary_blue"
                                 android:text="@string/minus" />
 
                             <TextView
@@ -465,8 +472,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.9"
+                                android:background="@drawable/btn_background"
                                 android:textColor="@color/white"
-                                android:backgroundTint="@color/primary_blue"
+
                                 android:text="@string/txt_plus" />
 
                         </LinearLayout>
@@ -505,7 +513,7 @@
                             android:textColor="@color/white"
                             android:textSize="18sp"
                             android:textStyle="bold"
-                            android:text=""
+                            android:text="0"
                             />
                     </LinearLayout>
 
@@ -513,12 +521,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="10dp"
-                        android:layout_marginBottom="25dp"
+                        android:layout_marginBottom="50dp"
                         android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/txt_total_tickets"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:textColor="@color/white"
@@ -530,13 +538,13 @@
 
                         <TextView
                             android:id="@+id/txt_total_tickets_value"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:textColor="@color/white"
                             android:textSize="18sp"
                             android:textStyle="bold"
-                            android:text="">
+                            android:text="0">
                         </TextView>
                     </LinearLayout>
 
@@ -549,41 +557,52 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
+            android:background="@color/white"
             android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/img_btn_cat_anim"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_margin="7dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
                 android:background="#00FFFFFF"
                 android:contentDescription="TODO"
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/img_cat_cool" />
 
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/txt_dialog_cat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginTop="5dp"
+                    android:layout_weight="1"
                     android:layout_marginEnd="10dp"
+                    android:layout_marginStart="5dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
                     android:text="Meaw, meaw, meaw.." />
 
                 <Button
                     android:id="@+id/btn_confirm_order"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="0.1"
                     android:layout_gravity="bottom"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginEnd="10dp"
-                    android:backgroundTint="@color/primary_blue"
+                    android:textColor="@color/white"
+                    android:background="@drawable/btn_background"
                     android:text="@string/i_m_ready_to_order" />
             </LinearLayout>
 

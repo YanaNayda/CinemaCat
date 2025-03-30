@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+       android:layout_gravity="start"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_alert_ready_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="24dp"
+            android:text="Ready to order ?" />
+
+        <TextView
+            android:id="@+id/txt_alert_cinema"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="#000000"
+            android:text="Your cinema : " />
+
+        <TextView
+            android:id="@+id/txt_alert_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="#000000"
+            android:text="Date :" />
+
+        <TextView
+            android:id="@+id/txt_alert_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="#000000"
+            android:text="Time :" />
+
+        <TextView
+            android:id="@+id/alert_txt_total_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount of tickets :"
+            android:textColor="#000000"
+            android:layout_margin="5dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/alert_txt_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Total price :"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/txt_alert_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:textColor="#000000"
+                android:text="" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:layout_gravity="start"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="15dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/btn_background"
+            android:text="I'm ready to go to the cinema " />
+
+        <ImageView
+            android:id="@+id/image_cat"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_weight="0.4"
+            app:srcCompat="@drawable/img_cat_cool" />
+
+
+    </LinearLayout>
+</LinearLayout>

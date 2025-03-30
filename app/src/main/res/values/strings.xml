@@ -15,5 +15,10 @@
     <string name="child">Child</string>
     <string name="only_with_a_student_card">*Only with a student card</string>
     <string name="only_for_children_under_12_years">Only for children under 12 years</string>
+    <string name="wow_it_s_my_favorite_movie">Wow! It\'s my favorite movie!</string>
+    <string name="it_s_look_like_very_cool">It\'s look like very cool!</string>
+    <string name="ssss_soo_scray_wolf">Ssss.soo..Scray wolf...</string>
+    <string name="love_you">Love you!</string>
+    <string name="todo">TODO</string>
 
 </resources>

@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/cinema_cat_logo"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CinemaCat"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"
