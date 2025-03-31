@@ -29,24 +29,21 @@
             android:padding="15dp"
             android:gravity="center"
             android:textColor="@color/black"
-            android:layout_weight="1"
-            android:text="Your Discount -10%" />
+            android:text="@string/your_discount_10" />
 
         <TextView
             android:id="@+id/txt_message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
+            android:textSize="20sp"
             android:padding="15dp"
-            android:textStyle="bold"
             android:textColor="@color/black"
-            android:layout_weight="1"
-            android:text="Wow ! Look at this food ! You can tap it and take a discount !" />
+            android:text="@string/wow_look_at_this_food_you_can_tap_it_and_take_a_discount" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0"
             android:layout_margin="10dp"
             android:orientation="horizontal">
 
@@ -55,17 +52,18 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="7dp"
+                android:contentDescription="@string/todo"
                 app:srcCompat="@drawable/img_cat_cool" />
 
             <Button
                 android:id="@+id/btn_no_discount"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:background="@drawable/btn_background"
                 android:padding="10dp"
                 android:layout_margin="7dp"
-                android:text="I don't want to take a discount!"
+                android:text="@string/i_don_t_want_to_take_a_discount"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
